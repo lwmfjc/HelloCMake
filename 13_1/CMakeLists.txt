@@ -4,7 +4,8 @@ project(OpenCVTest)
 
 find_package(OpenCV REQUIRED)
 
-message(STATUS "OpenCV_LIBS = ${OpenCV_LIBS}")
+#显示变量表示的所有依赖名
+#message(STATUS "OpenCV_LIBS = ${OpenCV_LIBS}")
 
 add_executable(
 	opencv_test
@@ -14,5 +15,7 @@ add_executable(
 target_link_libraries(
 	opencv_test
 	PRIVATE
-	OpenCV::opencv_core
+	opencv_core
+#	${OpenCV_LIBS}
+#	${OpenCV_LIBRARIES}
 )
